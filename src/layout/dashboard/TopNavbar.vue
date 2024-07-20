@@ -39,12 +39,20 @@
               <p>Settings</p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" @click.prevent="logout">
+              <i class="ti-back-right"></i>
+              <p>Logout</p>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 </template>
 <script>
+import { auth } from "@/firebase/firebaseConfig";
+
 export default {
   computed: {
     routeName() {
@@ -72,6 +80,14 @@ export default {
     },
     hideSidebar() {
       this.$sidebar.displaySidebar(false);
+    },
+    async logout() {
+      try {
+        await auth.signOut();
+        this.$router.push("/login");
+      } catch (error) {
+        console.error("Logout failed:", error);
+      }
     },
   },
 };

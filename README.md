@@ -62,3 +62,12 @@ For detailed explanation on how things work, checkout the [guide](https://github
 ## License
 
 [MIT](https://github.com/creativetimofficial/vue-paper-dashboard/blob/master/LICENSE.md)
+
+## Firebase hosting
+
+```
+firebase login
+firebase init
+npm run build
+firebase deploy
+```

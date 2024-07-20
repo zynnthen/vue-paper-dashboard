@@ -2,6 +2,10 @@ import DashboardLayout from "@/layout/dashboard/DashboardLayout.vue";
 // GeneralViews
 import NotFound from "@/pages/NotFoundPage.vue";
 
+// Public pages
+import Login from "@/pages/Auth/Login.vue";
+import Register from "@/pages/Auth/Register.vue";
+
 // Admin pages
 import Dashboard from "@/pages/Dashboard.vue";
 import UserProfile from "@/pages/UserProfile.vue";
@@ -21,39 +25,48 @@ const routes = [
         path: "dashboard",
         name: "dashboard",
         component: Dashboard,
+        meta: { requiresAuth: true },
       },
       {
         path: "stats",
         name: "stats",
         component: UserProfile,
+        meta: { requiresAuth: true },
       },
       {
         path: "notifications",
         name: "notifications",
         component: Notifications,
+        meta: { requiresAuth: true },
       },
       {
         path: "icons",
         name: "icons",
         component: Icons,
+        meta: { requiresAuth: true },
       },
       {
         path: "maps",
         name: "maps",
         component: Maps,
+        meta: { requiresAuth: true },
       },
       {
         path: "typography",
         name: "typography",
         component: Typography,
+        meta: { requiresAuth: true },
       },
       {
         path: "table-list",
         name: "table-list",
         component: TableList,
+        meta: { requiresAuth: true },
       },
     ],
   },
+  { path: "/login", name: "login", component: Login },
+  { path: "/register", name: "register", component: Register },
   { path: "*", component: NotFound },
 ];
 

@@ -16,14 +16,23 @@
 import Vue from "vue";
 import App from "./App";
 import router from "./router/index";
+import { auth } from "@/firebase/firebaseConfig";
 
 import PaperDashboard from "./plugins/paperDashboard";
 import "vue-notifyjs/themes/default.css";
 
 Vue.use(PaperDashboard);
 
-/* eslint-disable no-new */
-new Vue({
-  router,
-  render: (h) => h(App),
-}).$mount("#app");
+Vue.config.productionTip = false;
+
+let app;
+
+// Ensure main Vue instance waits for Firebase to initialize
+auth.onAuthStateChanged(() => {
+  if (!app) {
+    app = new Vue({
+      router,
+      render: (h) => h(App),
+    }).$mount("#app");
+  }
+});
