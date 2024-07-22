@@ -14,6 +14,7 @@ import Icons from "@/pages/Icons.vue";
 import Maps from "@/pages/Maps.vue";
 import Typography from "@/pages/Typography.vue";
 import TableList from "@/pages/TableList.vue";
+import StockList from "@/pages/Demo/StockList.vue";
 
 const routes = [
   {
@@ -27,40 +28,46 @@ const routes = [
         component: Dashboard,
         meta: { requiresAuth: true },
       },
+      // {
+      //   path: "stats",
+      //   name: "stats",
+      //   component: UserProfile,
+      //   meta: { requiresAuth: true },
+      // },
+      // {
+      //   path: "notifications",
+      //   name: "notifications",
+      //   component: Notifications,
+      //   meta: { requiresAuth: true },
+      // },
+      // {
+      //   path: "icons",
+      //   name: "icons",
+      //   component: Icons,
+      //   meta: { requiresAuth: true },
+      // },
+      // {
+      //   path: "maps",
+      //   name: "maps",
+      //   component: Maps,
+      //   meta: { requiresAuth: true },
+      // },
+      // {
+      //   path: "typography",
+      //   name: "typography",
+      //   component: Typography,
+      //   meta: { requiresAuth: true },
+      // },
+      // {
+      //   path: "table-list",
+      //   name: "table-list",
+      //   component: TableList,
+      //   meta: { requiresAuth: true },
+      // },
       {
-        path: "stats",
-        name: "stats",
-        component: UserProfile,
-        meta: { requiresAuth: true },
-      },
-      {
-        path: "notifications",
-        name: "notifications",
-        component: Notifications,
-        meta: { requiresAuth: true },
-      },
-      {
-        path: "icons",
-        name: "icons",
-        component: Icons,
-        meta: { requiresAuth: true },
-      },
-      {
-        path: "maps",
-        name: "maps",
-        component: Maps,
-        meta: { requiresAuth: true },
-      },
-      {
-        path: "typography",
-        name: "typography",
-        component: Typography,
-        meta: { requiresAuth: true },
-      },
-      {
-        path: "table-list",
-        name: "table-list",
-        component: TableList,
+        path: "stock-list",
+        name: "stock-list",
+        component: StockList,
         meta: { requiresAuth: true },
       },
     ],

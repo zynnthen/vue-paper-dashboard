@@ -30,7 +30,7 @@
     <div class="row">
       <div class="col-12">
         <chart-card
-          title="Users behavior"
+          title="Machines behavior"
           sub-title="24 Hours performance"
           :chart-data="usersChart.data"
           :chart-options="usersChart.options"
@@ -39,35 +39,35 @@
             <i class="ti-reload"></i> Updated 3 minutes ago
           </span>
           <div slot="legend">
-            <i class="fa fa-circle text-info"></i> Open
-            <i class="fa fa-circle text-danger"></i> Click
-            <i class="fa fa-circle text-warning"></i> Click Second Time
+            <i class="fa fa-circle text-info"></i> Machine A
+            <i class="fa fa-circle text-danger"></i> Machine B
+            <i class="fa fa-circle text-warning"></i> Machine C
           </div>
         </chart-card>
       </div>
 
       <div class="col-md-6 col-12">
         <chart-card
-          title="Email Statistics"
-          sub-title="Last campaign performance"
+          title="Energy Statistics"
+          sub-title="Power utilisation"
           :chart-data="preferencesChart.data"
           chart-type="Pie"
         >
           <span slot="footer">
-            <i class="ti-timer"></i> Campaign set 2 days ago</span
+            <i class="ti-timer"></i> Machine set 2 days ago</span
           >
           <div slot="legend">
-            <i class="fa fa-circle text-info"></i> Open
-            <i class="fa fa-circle text-danger"></i> Bounce
-            <i class="fa fa-circle text-warning"></i> Unsubscribe
+            <i class="fa fa-circle text-info"></i> Idle
+            <i class="fa fa-circle text-danger"></i> Abnormal
+            <i class="fa fa-circle text-warning"></i> Normal
           </div>
         </chart-card>
       </div>
 
       <div class="col-md-6 col-12">
         <chart-card
-          title="2015 Sales"
-          sub-title="All products including Taxes"
+          title="Current"
+          sub-title="All products Ampere"
           :chart-data="activityChart.data"
           :chart-options="activityChart.options"
         >
@@ -75,8 +75,8 @@
             <i class="ti-check"></i> Data information certified
           </span>
           <div slot="legend">
-            <i class="fa fa-circle text-info"></i> Tesla Model S
-            <i class="fa fa-circle text-warning"></i> BMW 5 Series
+            <i class="fa fa-circle text-info"></i> Site A
+            <i class="fa fa-circle text-warning"></i> Site B
           </div>
         </chart-card>
       </div>
@@ -99,15 +99,15 @@ export default {
       statsCards: [
         {
           type: "warning",
-          icon: "ti-server",
+          icon: "ti-pulse",
           title: "Capacity",
-          value: "105GB",
+          value: "105kWh",
           footerText: "Updated now",
           footerIcon: "ti-reload",
         },
         {
           type: "success",
-          icon: "ti-wallet",
+          icon: "ti-server",
           title: "Revenue",
           value: "$1,345",
           footerText: "Last day",
@@ -115,7 +115,7 @@ export default {
         },
         {
           type: "danger",
-          icon: "ti-pulse",
+          icon: "ti-alert",
           title: "Errors",
           value: "23",
           footerText: "In the last hour",
@@ -123,8 +123,8 @@ export default {
         },
         {
           type: "info",
-          icon: "ti-twitter-alt",
-          title: "Followers",
+          icon: "ti-tag",
+          title: "Active machines",
           value: "+45",
           footerText: "Updated now",
           footerIcon: "ti-reload",
