@@ -2,7 +2,8 @@
   <div class="wrapper">
     <side-bar>
       <template slot="links">
-        <sidebar-link to="/scanner" name="Scanner List" icon="ti-panel" />
+        <sidebar-link to="/summary" name="Summary" icon="ti-bookmark" />
+        <sidebar-link to="/scanner" name="Scanner" icon="ti-panel" />
         <sidebar-link
           to="/stock-list"
           name="Stock List"
